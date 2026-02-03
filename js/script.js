@@ -12,8 +12,8 @@ const stages = [
   },
   {
     image: "assets/stage-1-crumble.png",
-    title: "Transition",
-    text: "I pursued a Higher Diploma in Software Development conversion course to fully commit to building systems."
+    title: "Conversion",
+    text: "I pursued a H. Dip in Software Development conversion course to build systems."
   },
   {
     image: "assets/stage-2-structure.png",
