@@ -411,3 +411,122 @@ body.dark .hero-text p {
 }
 /* End of Contact Page */
 /*---------------------*/
+
+
+/*-------------*/
+/* Skills Page */
+.skills-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+.skills-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.skills-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.skills-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.skills-section {
+  margin-bottom: 4rem;
+}
+
+.skills-section h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 0.5rem;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.5rem;
+  
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-item i {
+  font-size: 1.4rem;
+  color: #2563eb;
+}
+
+.skill-item span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+.skills-section.learning {
+  background-color: #f8faff;
+  padding: 2.5rem;
+  border-radius: 14px;
+  border: 1px solid #e0e7ff;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 2rem;
+}
+
+.cert-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background-color: #fff;
+}
+
+.cert-item img {
+  max-width: 100%;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+.cert-item a {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  text-align: center;
+}
+
+.cert-item a:hover {
+  text-decoration: underline;
+}
+
+/* End of Skills Page */
+/*--------------------*/
