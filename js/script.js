@@ -46,3 +46,29 @@ heroImage.addEventListener("click", () => {
     heroImage.style.opacity = 1;
   }, 300);
 });
+
+
+// Slideshow for Projects Page
+document.addEventListener('DOMContentLoaded', () => {
+
+  // Loop through each project media container
+  const projectContainers = document.querySelectorAll('.project-media');
+
+  projectContainers.forEach(container => {
+    const slides = container.querySelectorAll('.slide');
+    let currentIndex = 0;
+
+    if (slides.length <= 1) return; // no slideshow if only one image
+
+    // Function to show the next slide
+    const showNextSlide = () => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length; // loop back
+      slides[currentIndex].classList.add('active');
+    };
+
+    // Change slide every 5 seconds (5000ms)
+    setInterval(showNextSlide, 5000);
+  });
+
+});

@@ -530,3 +530,120 @@ body.dark .hero-text p {
 
 /* End of Skills Page */
 /*--------------------*/
+
+
+/*---------------*/
+/* Projects Page */
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+.projects-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.projects-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.projects-header p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.project-media {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-media .slide {
+  display: none; 
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-media .slide.active {
+  display: block; 
+}
+
+.project-media img,
+.project-media video {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+  border-radius: 0;
+}
+
+.project-media video {
+  max-height: 300px;
+}
+
+.project-info {
+  padding: 1.5rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.project-info h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.project-links a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+
+/* End of Projects Page */
+/*----------------------*/
