@@ -9,6 +9,7 @@
 body {
     background-color: #f6f7f9;
     color: #1a1a1a;
+    padding-top: 20px;
 }
 
 h1, h2, h3, h4 {
@@ -25,11 +26,19 @@ p {
 /*--------*/
 /* Navbar */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem 3rem;
-    background: transparent;
+    background-color: #fff;
+    transition: box-shadow 0.2s ease;
+    border-bottom: 1px solid #eee;
 }
 
 .nav-links {
@@ -73,6 +82,10 @@ p {
 
 .nav-logo:hover .bracket:last-of-type {
   transform: translateX(5px);
+}
+
+.navbar.scrolled {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 /* End of Navbar */
 /*---------------*/
