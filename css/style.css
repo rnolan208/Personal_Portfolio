@@ -64,6 +64,7 @@ p {
   color: #2563eb;
 }
 
+/* Logo */
 .nav-logo {
   font-family: 'JetBrains Mono', monospace;
   font-size: 1.3rem;
@@ -82,16 +83,10 @@ p {
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.nav-logo .name {
-  color: #111;
-}
-
-/* Hover effect for desktop */
+/* Logo hover animation */
 .nav-logo:hover .bracket:first-of-type {
   transform: translateX(-5px);
 }
-
-/* Hover effect for desktop */
 .nav-logo:hover .bracket:last-of-type {
   transform: translateX(5px);
 }
@@ -105,18 +100,84 @@ p {
   display: none;
 }
 
-/* Mobile: show short name, hide full */
-@media (max-width: 768px) {
-  .nav-logo .name.full {
-    display: none;
-  }
-  .nav-logo .name.short {
-    display: inline;
-  }
-}
-
+/* Navbar shadow when scrolled */
 .navbar.scrolled {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Hamburger button (mobile only) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 20px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #111;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Logo text swap */
+  .nav-logo .name.full { 
+    display: none; 
+  }
+  .nav-logo .name.short { 
+    display: inline; 
+  }
+  /* Show hamburger */
+  .nav-toggle {
+    display: flex;
+  }
+
+  /* Nav Hide links by default */
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 200px;
+    background-color: #fff;
+    flex-direction: column;
+    gap: 0;
+    display: none;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid #eee;
+  }
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    padding: 0.8rem 1rem;
+    display: block;
+  }
+
+  /* Show links when toggled */
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* Reduce gap between logo and hamburger on mobile */
+  .navbar {
+    padding: 1rem 2rem;
+  }
 }
 
 /* End of Navbar */

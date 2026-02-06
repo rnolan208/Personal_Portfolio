@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
 /*************************
 NAVBAR SHADOW ON SCROLLING
 *************************/
@@ -96,3 +97,14 @@ window.addEventListener('scroll', () => {
     navbar.classList.remove('scrolled');
   }
 });
+
+
+/****************
+NAVBAR FOR MOBILE
+****************/
+const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
