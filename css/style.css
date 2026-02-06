@@ -56,6 +56,12 @@ p {
   color: #1a1a1a;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  position: relative;
+  transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #2563eb;
 }
 
 .nav-logo {
@@ -144,6 +150,43 @@ p {
   color: #2563eb;
   opacity: 1;
   transform: translateY(-2px);
+}
+
+/* Tooltip */
+.footer-socials a::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 140%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #111;
+  color: #fff;
+  padding: 0.35rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+/* Tooltip arrow */
+.footer-socials a::before {
+  content: "";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: #111 transparent transparent transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.footer-socials a:hover::after,
+.footer-socials a:hover::before {
+  opacity: 1;
 }
 
 /* End of Footer */
