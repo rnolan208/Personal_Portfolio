@@ -108,3 +108,43 @@ const toggle = document.querySelector('.nav-toggle');
   toggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
   });
+
+
+/**********************/
+/* BACK TO TOP BUTTON */
+  const backToTopBtn = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.style.opacity = '1';
+    backToTopBtn.style.pointerEvents = 'auto';
+  } else {
+    backToTopBtn.style.opacity = '0';
+    backToTopBtn.style.pointerEvents = 'none';
+  }
+});
+
+/* Above footer */
+const footerObserver = new IntersectionObserver(
+  ([entry]) => {
+    if (entry.isIntersecting) {
+      backToTopBtn.classList.add('above-footer');
+    } else {
+      backToTopBtn.classList.remove('above-footer');
+    }
+  },
+  {
+    threshold: 0.1
+  }
+);
+
+footerObserver.observe(footer);
+
+
+/* Scroll to top */
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
