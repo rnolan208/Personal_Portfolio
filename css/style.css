@@ -10,6 +10,7 @@ body {
   background-color: #f6f7f9;
   color: #1a1a1a;
   padding-top: 20px;
+  overflow-x: hidden;
 }
 
 h1,
@@ -195,6 +196,8 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  background-color: #f6f7f9;
+  box-shadow: 0 -6px 20px rgba(0,0,0,0.04);
 }
 
 .footer-text {
@@ -381,13 +384,14 @@ body.dark .hero-text p {
   height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 4px solid #ddd;
+  border: 6px solid #ddd;
   filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  transition: filter 0.5s ease;
 }
 
 .hero-photo img:hover {
     filter: grayscale(0%);
+    border-color: #2563eb;
 }
 
 /* Timeline */
@@ -488,7 +492,7 @@ body.dark .hero-text p {
   position: absolute;
   bottom: 0;
   left: 50%;
-  width: 720px;
+  width: min(720px, 90%);
   height: 2px;
   background-color: #e5e7eb;
   transform: translateX(-50%);
@@ -770,6 +774,21 @@ body.dark .hero-text p {
   gap: 2rem;
 }
 
+/* Mobile Screen Layout */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Tablet Screen Layout */
+@media (max-width: 1024px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -857,11 +876,12 @@ body.dark .hero-text p {
 /*------------------------*/
 /* Wrapper For Side Image */
 .page-wrapper {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     /*background-color: red;*/
-    background-image: url("../assets/background/background_side_image2.png");
+    background-image: url("../assets/background/background_side_image.png");
     background-size: cover;
+    border-top: 20px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -882,6 +902,5 @@ body.dark .hero-text p {
         padding: 3rem 1.5rem;
     }
 }
-
 /* End of Wrapper For Side Image */
 /*-------------------------------*/
