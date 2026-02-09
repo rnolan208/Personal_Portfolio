@@ -66,19 +66,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
   projectContainers.forEach(container => {
     const slides = container.querySelectorAll('.slide');
+    const caption = container.querySelector('.slide-caption');
+    const prevBtn = container.querySelector('.prev');
+    const nextBtn = container.querySelector('.next');
+
     let currentIndex = 0;
 
     if (slides.length <= 1) return; // no slideshow if only one image
 
-    const showNextSlide = () => {
-      slides[currentIndex].classList.remove('active');
-      currentIndex = (currentIndex + 1) % slides.length; // loop back
-      slides[currentIndex].classList.add('active');
+    const updateSlide = (index) => {
+      slides.forEach(slide => slide.classList.remove('active'));
+      slides[index].classList.add('active');
+
+      // caption text from alt attribute
+      caption.textContent = slides[index].alt || '';
     };
 
-    // Change slide every 5 seconds (5000ms)
-    setInterval(showNextSlide, 5000);
-  });
+    const nextSlide = () => {
+      currentIndex = (currentIndex + 1) % slides.length;
+      updateSlide(currentIndex);
+    };
+
+    const prevSlide = () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      updateSlide(currentIndex);
+    };
+
+    const startAutoSlide = () => {
+      intervalId = setInterval(nextSlide, 5000);
+    };
+
+    const stopAutoSlide = () => {
+      clearInterval(intervalId);
+    };
+
+    // Buttons
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Pause on hover
+    container.addEventListener('mouseenter', stopAutoSlide);
+    container.addEventListener('mouseleave', startAutoSlide);
 
 });
 
@@ -103,16 +131,16 @@ window.addEventListener('scroll', () => {
 NAVBAR FOR MOBILE
 ****************/
 const toggle = document.querySelector('.nav-toggle');
-  const navLinks = document.querySelector('.nav-links');
+const navLinks = document.querySelector('.nav-links');
 
-  toggle.addEventListener('click', () => {
-    navLinks.classList.toggle('active');
-  });
+toggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
 
 
 /**********************/
 /* BACK TO TOP BUTTON */
-  const backToTopBtn = document.querySelector('.back-to-top');
+const backToTopBtn = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
@@ -148,3 +176,5 @@ backToTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+})

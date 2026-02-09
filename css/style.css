@@ -892,6 +892,58 @@ body.dark .hero-text p {
     color: #2563eb;
 }
 
+/* SlideShow Controls */
+.slide-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease, opacity 0.2s ease;
+  opacity: 0;
+}
+
+.project-media:hover .slide-btn {
+  opacity: 1;
+}
+
+.slide-btn:hover {
+  background: #2563eb;
+  color: #fff;
+}
+
+.slide-btn.prev {
+  left: 10px;
+}
+
+.slide-btn.next {
+  right: 10px;
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.85rem;
+  font-family: 'Roboto', sans-serif;
+  color: #2563eb;
+  background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+  pointer-events: none;
+}
+
+
 /* End of Projects Page */
 /*----------------------*/
 
