@@ -869,6 +869,29 @@ body.dark .hero-text p {
   text-decoration: underline;
 }
 
+/* Project Tech Stack */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.tech-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+
+    font-size: 0.85rem;
+    font-family: 'Roboto', sans-serif;
+    color: #555;
+}
+
+.tech-item i {
+    font-size: 1rem;
+    color: #2563eb;
+}
+
 /* End of Projects Page */
 /*----------------------*/
 
