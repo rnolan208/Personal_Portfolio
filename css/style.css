@@ -941,9 +941,8 @@ body.dark .hero-text p {
   color: #2563eb;
   background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
   pointer-events: none;
+  letter-spacing: 0.3px;
 }
-
-
 /* End of Projects Page */
 /*----------------------*/
 
