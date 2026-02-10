@@ -140,15 +140,16 @@ toggle.addEventListener('click', () => {
 
 /**********************/
 /* BACK TO TOP BUTTON */
+const footer = document.querySelector('.footer');
 const backToTopBtn = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 300) {
-    backToTopBtn.style.opacity = '1';
-    backToTopBtn.style.pointerEvents = 'auto';
+    backToTopBtn.classList.add('visible');
+
   } else {
-    backToTopBtn.style.opacity = '0';
-    backToTopBtn.style.pointerEvents = 'none';
+    backToTopBtn.classList.remove('visible');
+
   }
 });
 
@@ -166,7 +167,9 @@ const footerObserver = new IntersectionObserver(
   }
 );
 
-footerObserver.observe(footer);
+if (footer) {
+  footerObserver.observe(footer);
+}
 
 
 /* Scroll to top */

@@ -1103,19 +1103,25 @@ body.dark .hero-text p {
   cursor: pointer;
 
   /* hidden on desktop */
-  display: none; 
+  display: flex; 
+  align-items: center;
+  justify-content: center;
 
   /* Hidden by default */
   opacity: 0;
   pointer-events: none;
-
-  align-items: center;
-  justify-content: center;
+  transform: translateY(10px);
 
   /* Same shadow as navbar and footer */
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   z-index: 999;
   transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 /* Show only on mobile */
@@ -1132,7 +1138,7 @@ body.dark .hero-text p {
 
 /* When footer is visible, lift button above it */
 .back-to-top.above-footer {
-  transform: translateY(-80px);
+  transform: translateY(-120px);
   opacity: 0.85;
 }
 /* End of Back To Top Button */
