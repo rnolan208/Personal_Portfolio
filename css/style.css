@@ -1087,6 +1087,62 @@ body.dark .hero-text p {
   letter-spacing: 0.3px;
 }
 
+/* Modal */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  max-width: 900px;
+  max-height: 85vh;
+  margin: 5vh auto;
+  background: #fff;
+  padding: 2rem;
+  overflow-y: auto;
+  border-radius: 12px;
+}
+
+body.dark .modal-content {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+#readme-content h1,
+#readme-content h2 {
+  margin-top: 1.5rem;
+}
+
+#readme-content pre {
+  background: #111827;
+  color: #e5e7eb;
+  padding: 1rem;
+  overflow-x: auto;
+  border-radius: 8px;
+}
+
 /* End of Projects Page */
 /*----------------------*/
 

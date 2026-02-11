@@ -180,4 +180,36 @@ backToTopBtn.addEventListener('click', () => {
   });
 });
 
+/* Modal Control for Github README on Projects Page */
+const modal = document.getElementById('readme-modal');
+const modalContent = document.getElementById('readme-content');
+const closeBtn = document.querySelector('.modal-close');
+const overlay = document.querySelector('.modal-overlay');
+
+document.querySelectorAll('.readme-link').forEach(link => {
+  link.addEventListener('click', async (e) => {
+    e.preventDefault();
+
+    const repo = link.dataset.repo;
+    const url = `https://raw.githubusercontent.com/${repo}/master/README.md`;
+
+    modal.classList.remove('hidden');
+    modalContent.innerHTML = '<p>Loading README...</p>';
+
+    try {
+      const res = await fetch(url);
+      const markdown = await res.text();
+      modalContent.innerHTML = marked.parse(markdown);
+    } catch (err) {
+      modalContent.innerHTML = '<p>Unable to load README.</p>';
+    }
+  });
+});
+
+[closeBtn, overlay].forEach(el =>
+  el.addEventListener('click', () => {
+    modal.classList.add('hidden');
+  })
+);
+
 })
