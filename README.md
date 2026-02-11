@@ -1,6 +1,6 @@
 # Robert Nolan – Developer Portfolio
 
-This is a website for my personal portfolio, showing my university and personal projects while also giving an about and contact me section.
+This is a website for my personal portfolio, showing my university and personal projects.
 It outlines my move from architecture to software development, highlighting projects, skills, and design-focused thinking.
 
 The website is hosted on netlify and is available at https://robertnolan-portfolio.netlify.app/
@@ -9,13 +9,13 @@ The website is hosted on netlify and is available at https://robertnolan-portfol
 
 ## ** File structure **
 
-index.html,
-about.html,
-contact.html,
-projects.html,
-skills.html,
-script.js,
-style.css
+- index.html
+- about.html
+- contact.html
+- projects.html
+- skills.html
+- script.js
+- style.css
 
 ---
 
