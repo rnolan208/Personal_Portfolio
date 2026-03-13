@@ -198,10 +198,55 @@ document.querySelectorAll('.readme-link').forEach(link => {
 
     try {
       const res = await fetch(url);
+
+      // Check if request failed (private repo, wrong branch, etc.)
+      if (!res.ok) {
+        throw new Error("README not accessible");
+      }
+
       const markdown = await res.text();
       modalContent.innerHTML = marked.parse(markdown);
+
     } catch (err) {
-      modalContent.innerHTML = '<p>Unable to load README.</p>';
+      modalContent.innerHTML = `
+        <div class="readme-error">
+
+          <img src="assets/images/error-readme.png" 
+          alt="README unavailable illustration"
+          class="readme-error-image">
+
+          <h3>README Unavailable</h3>
+
+          <p>
+            Oops! The README could not be loaded. 
+          </p>
+          <p>
+            This usually happens if the
+            repository is currently private or the README file cannot
+            be accessed. 
+          </p>
+          <p>
+            Please contact me directly to request access at:
+          </p>
+          <br>
+
+          <p><em>
+            rnolan208@gmail.com
+          </em></p>
+          <br>
+
+          <p>Or</p>
+          <br>
+
+          <p>
+            Please visit the repository directly:
+          </p>
+
+          <a href="https://github.com/${repo}" target="_blank" rel="noopener">
+            View on GitHub →
+          </a>
+        </div>
+      `;
     }
   });
 });
