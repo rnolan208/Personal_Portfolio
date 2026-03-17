@@ -537,6 +537,27 @@ body.dark .hero-text p {
   border-color: #2563eb;
 }
 
+/* Intro Text */
+.about-intro{
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-intro h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.about-intro p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
 /* Timeline */
 .about-timeline {
   max-width: 900px;
@@ -580,6 +601,37 @@ body.dark .hero-text p {
   color: #555;
 }
 
+/* Focus */
+.about-focus {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-focus h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.focus-card i {
+  color: #2563eb;
+}
+
+.focus-card h3 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.focus-card p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
 /* Mindset & Interests */
 .about-mindset {
   max-width: 800px;
@@ -619,10 +671,35 @@ body.dark .hero-text p {
   font-weight: 500;
 }
 
+/* Currently Learning */
+.about-learning {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.about-learning h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.about-learning li {
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.05rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
 /* Separator Lines*/
 .about-hero,
 .about-timeline,
-.about-mindset {
+.about-mindset,
+.about-learning,
+.about-focus,
+.about-intro {
   position: relative;
   padding-bottom: 4rem;
   margin-bottom: 4rem;
@@ -630,7 +707,10 @@ body.dark .hero-text p {
 
 .about-hero::after,
 .about-timeline::after,
-.about-mindset::after {
+.about-mindset::after,
+.about-learning::after,
+.about-focus::after,
+.about-intro::after {
   content: "";
   position: absolute;
   bottom: 0;
