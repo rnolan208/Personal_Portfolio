@@ -789,7 +789,7 @@ body.dark .hero-text p {
 }
 
 .contact-form .btn-primary {
-  display: inline-block;
+  display: block;
   padding: 0.75rem 2rem;
   font-family: 'Space Grotesk', sans-serif;
   font-weight: 600;
@@ -800,10 +800,46 @@ body.dark .hero-text p {
   color: #fff;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 1rem auto 0;
 }
 
 .contact-form .btn-primary:hover {
   background-color: #1d4ed8;
+}
+
+.contact-response-time {
+  padding-top: 1.5rem;
+  font-size: 1.2rem;
+  text-align: center;
+  color: #444;
+}
+
+.input-group {
+  position: relative;
+}
+
+.input-group i {
+  position: absolute;
+  left: 12px;
+  top: 14px;
+  opacity: 0.6;
+}
+
+.input-group input,
+.input-group textarea {
+  padding-left: 38px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  transition: all 0.25s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;   /* your blue */
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.2);
 }
 
 /* Alternative contact options */
