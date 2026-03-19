@@ -138,8 +138,9 @@ toggle.addEventListener('click', () => {
 });
 
 
-/**********************/
-/* BACK TO TOP BUTTON */
+/*****************
+BACK TO TOP BUTTON
+*****************/
 const footer = document.querySelector('.footer');
 const backToTopBtn = document.querySelector('.back-to-top');
 
@@ -153,7 +154,9 @@ window.addEventListener('scroll', () => {
   }
 });
 
-/* Above footer */
+/***********
+ABOVE FOOTER
+***********/
 const footerObserver = new IntersectionObserver(
   ([entry]) => {
     if (entry.isIntersecting) {
@@ -180,7 +183,9 @@ backToTopBtn.addEventListener('click', () => {
   });
 });
 
-/* Modal Control for Github README on Projects Page */
+/***********************************************
+MODAL CONTROL for Github README on PROJECTS PAGE 
+***********************************************/
 const modal = document.getElementById('readme-modal');
 const modalContent = document.getElementById('readme-content');
 const closeBtn = document.querySelector('.modal-close');
@@ -257,4 +262,46 @@ document.querySelectorAll('.readme-link').forEach(link => {
   })
 );
 
-})
+
+/*************************
+IMAGE MODAL (SKILLS PAGE)
+*************************/
+const imageModal = document.getElementById("image-modal");
+const imageModalImg = document.getElementById("image-modal-img");
+const imageModalClose = document.querySelector(".image-modal-close");
+
+if (imageModal && imageModalImg && imageModalClose) {
+
+  const certImages = document.querySelectorAll(".cert-item img");
+
+  certImages.forEach(img => {
+      img.addEventListener("click", (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("IMAGE CLICKED");
+        imageModal.classList.add("active");
+        imageModalImg.src = img.src;
+      });
+    });
+
+  // Close button
+  imageModalClose.addEventListener("click", () => {
+    imageModal.classList.remove("active");
+  });
+
+  // Click outside image
+  imageModal.addEventListener("click", (e) => {
+    if (e.target === imageModal) {
+      imageModal.classList.remove("active");
+    }
+  });
+
+  // ESC key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      imageModal.classList.remove("active");
+    }
+  });
+}
+
+});
