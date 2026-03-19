@@ -269,10 +269,9 @@ IMAGE MODAL (SKILLS PAGE)
 const imageModal = document.getElementById("image-modal");
 const imageModalImg = document.getElementById("image-modal-img");
 const imageModalClose = document.querySelector(".image-modal-close");
+const certImages = document.querySelectorAll(".cert-item img");
 
-if (imageModal && imageModalImg && imageModalClose) {
-
-  const certImages = document.querySelectorAll(".cert-item img");
+if (imageModal && imageModalImg && imageModalClose && certImages.length > 0) {
 
   certImages.forEach(img => {
       img.addEventListener("click", (e) => {
@@ -304,4 +303,4 @@ if (imageModal && imageModalImg && imageModalClose) {
   });
 }
 
-});
+})
