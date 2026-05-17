@@ -14,22 +14,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const stages = [
       {
-        image: "assets/images/stage_0_building.png",
+        image: "assets/images/stage_0_building.webp",
         title: "Foundations",
         text: "My background is rooted in structured thinking, design principles, and understanding constraints."
       },
       {
-        image: "assets/images/stage_1_building.png",
+        image: "assets/images/stage_1_building.webp",
         title: "Conversion",
         text: "I pursued a H. Dip in Software Development conversion course to build systems."
       },
       {
-        image: "assets/images/stage_2_building.png",
+        image: "assets/images/stage_2_building.webp",
         title: "Core Skills",
         text: "Learning the fundamentals and rebuilding from the ground up through hands-on development."
       },
       {
-        image: "assets/images/stage_3_building.png",
+        image: "assets/images/stage_3_building.webp",
         title: "Now Building in Code",
         text: "Applying structured thinking to software systems and real-world problems."
       }
