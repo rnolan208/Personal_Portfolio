@@ -136,6 +136,12 @@ body,
   transition: all 0.3s ease;
 }
 
+.nav-logo-link {
+  text-decoration: none;
+  color: inherit;
+  display: inline-flex;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
 
@@ -1390,6 +1396,85 @@ body.dark .modal-content {
 }
 
 /* End of Projects Page */
+/*----------------------*/
+
+
+/*----------------*/
+/* Services Page */
+.services-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 2rem 4rem;
+}
+
+.services-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.services-header h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.services-intro {
+  max-width: 650px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Services page support cards */
+.services-page .focus-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.services-page .focus-card {
+  background-color: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.services-page .focus-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.services-page .focus-card i {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  color: #2563eb;
+}
+
+/* Services icons inside interests */
+.services-page .interest-item i {
+  display: block;
+  font-size: 2rem;
+  color: #2563eb;
+  margin-bottom: 0.75rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .services-page {
+    padding: 4rem 1rem 3rem;
+  }
+
+  .services-header h1 {
+    font-size: 2.4rem;
+  }
+
+  .services-page .focus-card {
+    padding: 1.5rem;
+  }
+}
+
+/* End of Services Page */
 /*----------------------*/
 
 
